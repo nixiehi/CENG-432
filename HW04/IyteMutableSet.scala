@@ -16,8 +16,11 @@ class IyteMutableSet {
   }
 
   def contains(item:Int): Boolean ={
-    var index: Int = hashCode(item)
+   var index: Int = hashCode(item)
+    if(bucket(index)!=null)
     bucket(index).contains(item)
+    else
+    false
   }
 
 
