@@ -49,7 +49,7 @@ case class NonValue() extends ILL {
 
   override def add(x: Int): ILL = new Node(x, NonValue())
 
-  override def contains(x: Int): Boolean = throw new IllegalArgumentException("no  such an element")
+  override def contains(x: Int): Boolean = false
 }
 
 class Node(override val head:Int,override val tail:ILL) extends ILL {
